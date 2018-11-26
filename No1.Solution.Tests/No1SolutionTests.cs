@@ -14,8 +14,8 @@ namespace No1.Solution.Tests
         public void DifferentConditionalTets()
         {
             string password = "12345678901234567890";
-            PasswordCheckerService service = new PasswordCheckerService(new SqlRepository()); 
-            //Assert.IsFalse(service.VerifyPassword(password));
+            PasswordCheckerService service = new PasswordCheckerService(new SqlRepository());
+            Assert.IsFalse(service.VerifyPassword(password));
         }
     }
 }

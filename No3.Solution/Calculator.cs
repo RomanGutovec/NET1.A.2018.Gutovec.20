@@ -28,7 +28,7 @@ namespace No3.Solution
 
             if (averagingMethod == null)
             {
-                throw new ArgumentNullException(nameof(values));
+                throw new ArgumentNullException(nameof(averagingMethod));
             }
 
             return averagingMethod.Calculate(values);
