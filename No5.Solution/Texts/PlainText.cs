@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace No5.Solution.Interfaces
+namespace No5.Solution.Texts
 {
-    public interface IDocumentPart
+    public class PlainText : DocumentPart
     {
-
+        
     }
 }
