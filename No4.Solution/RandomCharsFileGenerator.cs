@@ -18,17 +18,6 @@ namespace No4.Solution
             return bytes;
         }
 
-        private string RandomString(int Size)
-        {
-            var random = new Random();
-
-            const string input = "abcdefghijklmnopqrstuvwxyz0123456789";
-
-            var chars = Enumerable.Range(0, Size).Select(x => input[random.Next(0, input.Length)]);
-
-            return new string(chars.ToArray());
-        }
-
         protected override void WriteBytesToFile(string fileName, byte[] content)
         {
             if (!Directory.Exists(WorkingDirectory))
@@ -37,6 +26,17 @@ namespace No4.Solution
             }
 
             File.WriteAllBytes($"{WorkingDirectory}//{fileName}", content);
+        }
+
+        private string RandomString(int size)
+        {
+            var random = new Random();
+
+            const string input = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+            var chars = Enumerable.Range(0, size).Select(x => input[random.Next(0, input.Length)]);
+
+            return new string(chars.ToArray());
         }
     }
 }

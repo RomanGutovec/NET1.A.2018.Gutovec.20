@@ -43,13 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConditionsVerify\CompositeConditions.cs" />
+    <Compile Include="ConditionsVerify\CheckContainsAlphabetical.cs" />
+    <Compile Include="ConditionsVerify\CheckContainsDigit.cs" />
+    <Compile Include="ConditionsVerify\CheckEmpty.cs" />
+    <Compile Include="ConditionsVerify\CheckLengthTooBig.cs" />
+    <Compile Include="ConditionsVerify\CheckLengthTooShort.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IVerify.cs" />
     <Compile Include="PasswordCheckerService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlRepository.cs" />
+    <Compile Include="Repositories\SqlRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Descriprion.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
